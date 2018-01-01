@@ -151,9 +151,9 @@ function getPhotFromoCurrentLocation() {
   const currentLocationName = helpers.handleLocalStorage(
     "currentLocation",
     "get"
-  );
+  ) || { city: "Durban", initial: "NL", country: "South-Africa" };
 
-  const locatioinFullName = `${currentLocationName.city}, ${
+  const locationFullName = `${currentLocationName.city}, ${
     currentLocationName.initial
   }, ${currentLocationName.country}`;
 
@@ -161,7 +161,7 @@ function getPhotFromoCurrentLocation() {
   helpers.handleSaveVisitedCities(locatioinFullName);
 
   // redirect the user to the photos page
-  urlRedirector.handleRedirection(locatioinFullName);
+  urlRedirector.handleRedirection(locationFullName);
 }
 
 // switch between all favorite photos and destination
