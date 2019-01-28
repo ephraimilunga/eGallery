@@ -1,0 +1,54 @@
+// background on hero section
+@mixin bgImageWithBlackOverlay($pahtToTheImage) {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url($pahtToTheImage);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin bgImageWithBlackOverlayDense($pahtToTheImage) {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url($pahtToTheImage);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+// background with black overlay author and places name
+@mixin backgroundOverLay() {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.789),
+    rgba(0, 0, 0, 0.589),
+    rgba(0, 0, 0, 0.021)
+  );
+}
+
+// background with black overlay author and places name
+@mixin backgroundOverLayFavorite() {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.489),
+    rgba(0, 0, 0, 0.289),
+    rgba(0, 0, 0, 0.021)
+  );
+}
+
+// background with black overlay author and places name
+@mixin backgroundOverLayTop() {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.289),
+    rgba(0, 0, 0, 0.189),
+    rgba(0, 0, 0, 0.011)
+  );
+}
+
+// background images on photos, and places blocks
+@mixin placesPhotsBg($pahtToTheImage) {
+  background: url($pahtToTheImage);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
