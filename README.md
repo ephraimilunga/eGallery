@@ -19,7 +19,7 @@ eGallery is a modern Web Application (powered by various APIs) writen in JavaScr
 
 # Tools used in the Project
 
-- [Parcel Bundler](https://en.parceljs.org/) : is a zero configuration bundler for web application.
+- [Parcel Bundler](https://en.parceljs.org/) : is a zero configuration bundler for web application. I've had a plaisir using it because of these features : ***Zero config code splitting**, ***Hot module replacement***, ***Friendly error logging***, ...
 - [Babel](https://babeljs.io/): is a JavaScript compiler that allows developer to build web appliation using the most recent features.
 
 # What I have learnd
