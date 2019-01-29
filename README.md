@@ -13,6 +13,7 @@ eGallery is a modern Web Application (powered by various APIs) writen in JavaScr
 # APIs used to build the App
 
 - [Unsplash](https://www.unsplash.com/) (main api in the project) : is one of the the best Photos API that gives developers access to thousand free public photos.
+- [Ajax Autocomplete List Cities JSON-P API](http://geobytes.com/free-ajax-cities-jsonp-api/) : is one of Geobytes’ web services that gives developers access to all cities worldwide. Did I mentioned it ? **It's free**.
 - [IPfy](https://www.ipify.org/) : is a simple public IP Address API that allows developers to get the user IP programmatically.
 - [ipStack](https://ipstack.com/) : Locate and idendify visitor by IP Address. IpStack return useful data like city_name, country_name, region_code, latitude and logitude, ...
 - [GoogleMap](https://developers.google.com/maps/documentation/javascript/adding-a-google-map) : Geolocate and display photos on the map.
