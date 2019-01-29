@@ -24,7 +24,7 @@ eGallery is a modern Web Application (powered by various APIs) writen in JavaScr
 
 # What I have learnd
 
-- How to fetch data form a none cross orgins endpoint. You can read how [here](https://cors-anywhere.herokuapp.com/),
+- How to fetch data from a none cross orgins endpoint. You can read how [here](https://cors-anywhere.herokuapp.com/),
 - Reading various apis document and use them,
 - Using the google map more advance method,
 - Using the most recent Javascript features (modules, reduce, map, filter, some, ...)
