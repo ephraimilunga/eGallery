@@ -478,7 +478,7 @@ main {
 
   @media only screen and (min-height: 769px) {
     section.header_hero {
-      @include bgImageWithBlackOverlayDense("../images/hero_bg_2.svg");
+      @include bgImageWithBlackOverlayDense("../images/hero0.jpg");
     }
   }
 
@@ -719,7 +719,6 @@ main {
               div.picture_container_block {
                 height: 250px;
                 background-color: #ccc;
-                @include placesPhotsBg("../images/block_bg_2.svg");
                 position: relative;
                 overflow: hidden;
                 border-radius: 4px;

@@ -328,10 +328,6 @@ main div.suggestion_destination_less_block_container div.destination_suggestion_
 }
 
 main div.destination_suggestion_block {
-  background: url("../images/block_bg.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   height: 220px;
   border-radius: 4px;
   position: relative;
@@ -2151,8 +2147,8 @@ main section.header_hero div.main_wrapper div.home_search_container div.home_sea
 
 @media only screen and (min-height: 769px) {
   main section.header_hero {
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("../images/hero_bg_2.svg");
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/hero_bg_2.svg");
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("../images/hero0.jpg");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/hero0.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -2412,10 +2408,6 @@ main section.favorites_picture_container div.main_wrapper div.favorite_pictures_
 main section.favorites_picture_container div.main_wrapper div.favorite_pictures_content div.favorite_pictures div.favorite_pictures_blocks div.favorite_pictures_slides div.picture_container_block {
   height: 250px;
   background-color: #ccc;
-  background: url("../images/block_bg_2.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   position: relative;
   overflow: hidden;
   border-radius: 4px;

@@ -215,7 +215,6 @@ body {
     }
 
     div.destination_suggestion_block {
-      @include placesPhotsBg("../images/block_bg.svg");
       height: 220px;
       border-radius: 4px;
       position: relative;

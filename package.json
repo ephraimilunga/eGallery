@@ -21,5 +21,8 @@
     "make": "^0.8.1",
     "scriptjs": "^2.5.9",
     "unsplash-js": "^4.8.0"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.8"
   }
 }

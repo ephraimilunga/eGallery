@@ -242,10 +242,6 @@ main div.suggestion_destination_less_block_container div.destination_suggestion_
 }
 
 main div.destination_suggestion_block {
-  background: url("../images/block_bg.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   height: 220px;
   border-radius: 4px;
   position: relative;
