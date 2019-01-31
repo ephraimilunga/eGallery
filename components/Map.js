@@ -16,7 +16,7 @@ const unsplash = new Unsplash({
   applicationId:
     "e3374e82ff1b9b886ffd9e4c1dfc2ad987b5adaf517c3bd1c8db51e6fd88100f",
   secret: "1b63fc0d362480a011f79572963f239d2906fad4f6aa5ec5ba7ef289ea1f5e46",
-  callbackUrl: "/index.html"
+  callbackUrl: "https://ephraimilunga.co.za/egallery/"
 });
 
 // **************** CLASS DECLARATION **********//

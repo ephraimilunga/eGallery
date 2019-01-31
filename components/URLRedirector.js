@@ -28,21 +28,23 @@ class URLRedirection {
       // check to see if the search key word from the local storage is the same  as the new key word
       if (getSearchKeyWord.name === searchKeyWord) {
         // if is the same redirect the user immediatlly
-        window.location.href = "http://localhost:1234/photos.html";
+        window.location.href =
+          "https://ephraimilunga.co.za/egallery/photos.html";
       } else {
         // if not
         // update the search keyword in the local storage
         helpers.handleLocalStorage(keywordName, "set", keyword);
 
         // redirect the user to the photos page
-        window.location.href = "http://localhost:1234/photos.html";
+        window.location.href =
+          "https://ephraimilunga.co.za/egallery/photos.html";
       }
     } else {
       // if we do not have any search keyword in the database
       // we insert the new key
       helpers.handleLocalStorage(keywordName, "set", keyword);
       // redirect the user to the photos page
-      window.location.href = "http://localhost:1234/photos.html";
+      window.location.href = "https://ephraimilunga.co.za/egallery/photos.html";
     }
 
     //

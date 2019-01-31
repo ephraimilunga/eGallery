@@ -326,14 +326,14 @@ class SinglePhotoManager {
                         }?force=true" class="download_container">
                             <img  data-href="${
                               photo.links.download
-                            }?force=true" class="download_icon has_href" src="/download.348554b6.svg" alt="">
+                            }?force=true" class="download_icon has_href" src="download.348554b6.svg" alt="">
                         </div>
                     </div>
                     <img class="photo_image" src="${photo.urls.full}" alt="">
                 </div>
 
                 <div class="section_details photos_info_section">
-                    <img class="close_the_photo_details" src="/cancel_icon.97a97d0f.svg" alt="">
+                    <img class="close_the_photo_details" src="cancel_icon.97a97d0f.svg" alt="">
                     <div class="author_details">
                         <img class="author_profile_picture" src="${
                           photo.user.profile_image.large

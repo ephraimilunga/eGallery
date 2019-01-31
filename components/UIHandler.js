@@ -105,7 +105,7 @@ class UIHandler {
           }</div>
               <div class="visited_country_intial_name">${splitedCity[1] ||
                 ""} - ${splitedCity[2] || ""}</div>
-              <div class="delete_from_visted"><img class="delete_icon_visited_city" src="/cancel_icon.97a97d0f.svg" alt=""></div>
+              <div class="delete_from_visted"><img class="delete_icon_visited_city" src="cancel_icon.97a97d0f.svg" alt=""></div>
           </div>
         `;
         })
@@ -245,7 +245,7 @@ class UIHandler {
                       }?force=true">
                           <img data-href="${
                             photo.links.download
-                          }?force=true" class="download_icon has_href" src="/download.348554b6.svg" alt="">
+                          }?force=true" class="download_icon has_href" src="download.348554b6.svg" alt="">
                       </a>
                       <div class="place_name">
                           <p id="${
@@ -499,7 +499,7 @@ class UIHandler {
                                     <div class="download_button">
                                         <img data-href="${
                                           photo.links.download
-                                        }?force=true" class="download_icon has_href" src="/download.348554b6.svg" alt="">
+                                        }?force=true" class="download_icon has_href" src="download.348554b6.svg" alt="">
                                     </div>
                                 </div>
                             </div>

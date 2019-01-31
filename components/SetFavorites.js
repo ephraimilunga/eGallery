@@ -13,7 +13,9 @@ import {
   favoriteDestinationContainer,
   loader,
   favoriteEmptyMessage,
-  arrows
+  arrows,
+  fullHeart,
+  emptyHeart
 } from "../components/HTMLElementSelector";
 
 // ************ INSTANTIAT OBJECTS *********** //
@@ -121,10 +123,7 @@ class SetFavorites {
               helpers.handleLocalStorage(keyName, "set", newFavoriteList);
 
               // change the icon to an empty heart
-              targetDestination.setAttribute(
-                "src",
-                "/heart_single_photo.981e654d.svg"
-              );
+              targetDestination.setAttribute("src", `${emptyHeart}`);
 
               // update the counter favorite in the nav bar
               uiHandler.handleDisplayFavoriteCount();
@@ -137,10 +136,7 @@ class SetFavorites {
               helpers.handleLocalStorage(keyName, "set", favoriteDestination);
 
               // set the favorite to a full heart
-              targetDestination.setAttribute(
-                "src",
-                "/full_heart_icon.58bd4568.svg"
-              );
+              targetDestination.setAttribute("src", `${fullHeart}`);
 
               // update the favorite counter in the nav bar
               uiHandler.handleDisplayFavoriteCount();
@@ -154,10 +150,7 @@ class SetFavorites {
             helpers.handleLocalStorage(keyName, "set", favoriteDestination);
 
             // set he clicked favorite icon to a full heart
-            targetDestination.setAttribute(
-              "src",
-              "/full_heart_icon.58bd4568.svg"
-            );
+            targetDestination.setAttribute("src", `${fullHeart}`);
 
             // update the counter in the nav bar
             uiHandler.handleDisplayFavoriteCount();
@@ -171,10 +164,7 @@ class SetFavorites {
           helpers.handleLocalStorage(keyName, "set", favoriteDestination);
 
           // set the clicked heart to a full heart
-          targetDestination.setAttribute(
-            "src",
-            "/full_heart_icon.58bd4568.svg"
-          );
+          targetDestination.setAttribute("src", `${fullHeart}`);
 
           // update the counter in the nav bar
           uiHandler.handleDisplayFavoriteCount();
@@ -209,7 +199,7 @@ class SetFavorites {
             favoriteListFromLocalStorage
           )
         ) {
-          icon.setAttribute("src", "/full_heart_icon.58bd4568.svg");
+          icon.setAttribute("src", `${fullHeart}`);
         }
       });
 
@@ -250,7 +240,7 @@ class SetFavorites {
                   <div data-destination="${favorite}" class="destination_suggestion_block" style="background-image: url('https://source.unsplash.com/featured/?${favorite}')">
                   
                       <div class="favorite_icon_destination_container">
-                          <img data-setfavorite="destination" data-destinationname="${favorite}" src="/full_heart_icon.58bd4568.svg"
+                          <img data-setfavorite="destination" data-destinationname="${favorite}" src="${fullHeart}"
                               alt="">
                       </div>
                   

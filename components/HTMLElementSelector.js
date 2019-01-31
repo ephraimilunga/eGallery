@@ -87,8 +87,8 @@ const favoriteEmptyMessage = `
 const showLoader = "loader_container_show";
 const hideLoader = "loader_container_hide";
 
-const fullHeart = "/full_heart_icon.58bd4568.svg";
-const emptyHeart = "/heart_single_photo.981e654d.svg";
+const fullHeart = "full_heart_icon.58bd4568.svg";
+const emptyHeart = "heart_single_photo.981e654d.svg";
 
 //favorite  local storage key
 const favoritePhotosKeyName = "favoritePhotos";

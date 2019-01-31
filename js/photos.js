@@ -306,5 +306,5 @@ window.addEventListener("DOMContentLoaded", () => {
 // back to home page
 const backtohome = document.querySelector(".back_to_home_page_icon");
 backtohome.addEventListener("click", function() {
-  window.location.href = "http://localhost:1234/index.html";
+  window.location.href = "https://ephraimilunga.co.za/egallery/";
 });
