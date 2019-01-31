@@ -181,11 +181,6 @@ const initMap = async function() {
   map.centerMap();
 };
 
-// if ($map !== null) {
-//   initMap();
-//   console.log("map");
-// }
-
 // **************** IMPORT MODULE *************//
 export default Map;
 

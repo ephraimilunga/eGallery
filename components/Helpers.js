@@ -494,25 +494,46 @@ export default class Helpers {
   }
 
   //**
-   /* Update the visited counter when the user delete them 
+  /* Update the visited counter when the user delete them
    */
-  handleCountVisitedCities () {
+  handleCountVisitedCities() {
     // local storage identifier
     const storageKeyName = "visitedCities";
 
     // get the cities listed from the local storage
-    const visitedCitiesFromLocalStorage = helpers.handleLocalStorage(storageKeyName, "get") || []
+    const visitedCitiesFromLocalStorage =
+      helpers.handleLocalStorage(storageKeyName, "get") || [];
 
-    // get the length 
-    const visitedCitiesLength = helpers.handleLength(visitedCitiesFromLocalStorage);
+    // get the length
+    const visitedCitiesLength = helpers.handleLength(
+      visitedCitiesFromLocalStorage
+    );
 
-    // get the counter container 
-    const counterContainer = searchDropDown.querySelector("span.visited_cities_counter");
+    // get the counter container
+    const counterContainer = searchDropDown.querySelector(
+      "span.visited_cities_counter"
+    );
 
     // display the count number
     if (visitedCitiesLength > 0)
-       uiHandler.handleDisplayMessageToTheUser(counterContainer, visitedCitiesLength);
-   
+      uiHandler.handleDisplayMessageToTheUser(
+        counterContainer,
+        visitedCitiesLength
+      );
+  }
+
+  //**
+  /* Make nested array as one array
+   /* @param {ArrayObject} arr1 
+   */
+  flattenDeep(arr1) {
+    return arr1.reduce(
+      (acc, val) =>
+        Array.isArray(val)
+          ? acc.concat(helpers.flattenDeep(val))
+          : acc.concat(val),
+      []
+    );
   }
 }
 

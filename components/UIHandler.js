@@ -277,7 +277,10 @@ class UIHandler {
     const clearTagsList = [];
 
     // loop through the photos list and extract all tags
-    const tags = photos.map(photo => photo.tags).flat();
+    const tagsList = photos.map(photo => photo.tags);
+
+    // bring all tags to the same level
+    const tags = helpers.flattenDeep(tagsList);
 
     // remove the tags that appear twice
     tags.reduce(function(obj, item) {
@@ -308,7 +311,6 @@ class UIHandler {
    /* @param {Event} e 
    */
   handleToggleMap(e) {
-
     // the class that active the switch effect
     const toggleClassName = "active_toggle";
     const hideMapClassName = "hide_map";
@@ -392,7 +394,9 @@ class UIHandler {
           <!--start destination block-->
           <div data-destination="${favorite}" class="destination_block all_destination_favorite_block hide ${from}" style="background-image: url('https://source.unsplash.com/featured/?${favorite}')">
               <div class="destination_name_container">
-                  <p class="destination_name">${splitedCity[0]} - ${splitedCity[1]}</p>
+                  <p class="destination_name">${splitedCity[0]} - ${
+          splitedCity[1]
+        }</p>
               </div>
           </div>
           <!--end destination block-->

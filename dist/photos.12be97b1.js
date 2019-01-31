@@ -10906,11 +10906,7 @@ function () {
   return function initMap() {
     return _ref.apply(this, arguments);
   };
-}(); // if ($map !== null) {
-//   initMap();
-//   console.log("map");
-// }
-// **************** IMPORT MODULE *************//
+}(); // **************** IMPORT MODULE *************//
 
 
 var _default = Map;
@@ -11088,9 +11084,12 @@ function () {
       // initialize the final list
       var clearTagsList = []; // loop through the photos list and extract all tags
 
-      var tags = photos.map(function (photo) {
+      var tagsList = photos.map(function (photo) {
         return photo.tags;
-      }).flat(); // remove the tags that appear twice
+      }); // bring all tags to the same level
+
+      var tags = _Helpers.helpers.flattenDeep(tagsList); // remove the tags that appear twice
+
 
       tags.reduce(function (obj, item) {
         if (!obj[item.title]) {
@@ -11836,8 +11835,8 @@ function () {
       return htmlElement.querySelector(selector);
     } //**
 
-    /* Update the visited counter when the user delete them 
-    */
+    /* Update the visited counter when the user delete them
+     */
 
   }, {
     key: "handleCountVisitedCities",
@@ -11845,14 +11844,26 @@ function () {
       // local storage identifier
       var storageKeyName = "visitedCities"; // get the cities listed from the local storage
 
-      var visitedCitiesFromLocalStorage = helpers.handleLocalStorage(storageKeyName, "get") || []; // get the length 
+      var visitedCitiesFromLocalStorage = helpers.handleLocalStorage(storageKeyName, "get") || []; // get the length
 
-      var visitedCitiesLength = helpers.handleLength(visitedCitiesFromLocalStorage); // get the counter container 
+      var visitedCitiesLength = helpers.handleLength(visitedCitiesFromLocalStorage); // get the counter container
 
       var counterContainer = _HTMLElementSelector.searchDropDown.querySelector("span.visited_cities_counter"); // display the count number
 
 
       if (visitedCitiesLength > 0) _UIHandler.uiHandler.handleDisplayMessageToTheUser(counterContainer, visitedCitiesLength);
+    } //**
+
+    /* Make nested array as one array
+     /* @param {ArrayObject} arr1 
+     */
+
+  }, {
+    key: "flattenDeep",
+    value: function flattenDeep(arr1) {
+      return arr1.reduce(function (acc, val) {
+        return Array.isArray(val) ? acc.concat(helpers.flattenDeep(val)) : acc.concat(val);
+      }, []);
     }
   }]);
 
@@ -16752,7 +16763,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52980" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52906" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
