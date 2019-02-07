@@ -12221,18 +12221,18 @@ function () {
       var _handleGetUserCurrentLocation = _asyncToGenerator(
       /*#__PURE__*/
       regeneratorRuntime.mark(function _callee() {
-        var ipStackKey, ipfy, ipStack, ip, city, currentLocation;
+        var ipfy, corsApiUrl, ipGeobytes, ip, city, currentLocation;
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                // ***** Api keys ***
-                ipStackKey = "e7aaa4e45f3c7fae3204efd4c3f540a3"; //*** End Points ****
+                //*** End Points ****
                 // IPfy (Get the user IP)
+                ipfy = "https://api.ipify.org?format=json"; // cross origin api
 
-                ipfy = "https://api.ipify.org?format=json"; // IPstack (get te user location details. lat, lng, country, ...)
+                corsApiUrl = "https://cors-anywhere.herokuapp.com/"; // ipGeobytes (get te user location details. lat, lng, country name, ...)
 
-                ipStack = "http://api.ipstack.com/"; // ***** Requests *****//
+                ipGeobytes = "http://getcitydetails.geobytes.com/GetCityDetails?fqcn="; // ***** Requests *****//
                 // get user ip
 
                 _context.next = 5;
@@ -12245,7 +12245,7 @@ function () {
               case 5:
                 ip = _context.sent;
                 _context.next = 8;
-                return fetch("".concat(ipStack).concat(ip, "?access_key=").concat(ipStackKey)).then(function (result) {
+                return fetch("".concat(corsApiUrl).concat(ipGeobytes).concat(ip)).then(function (result) {
                   return result.json();
                 }).then(function (data) {
                   return data;
@@ -12255,11 +12255,11 @@ function () {
                 city = _context.sent;
                 _context.next = 11;
                 return {
-                  city: city.city,
-                  initial: city.region_code,
-                  country: city.country_name,
-                  lat: city.latitude,
-                  lng: city.longitude
+                  city: city.geobytescity,
+                  initial: city.geobytescode,
+                  country: city.geobytescountry,
+                  lat: city.geobyteslatitude,
+                  lng: city.geobyteslongitude
                 };
 
               case 11:
@@ -16724,9 +16724,24 @@ _Helpers.helpers.handleAddEventListener(_HTMLElementSelector.photosDestinationsC
 window.addEventListener("keypress", handleTouchValidation);
 window.addEventListener("DOMContentLoaded", function () {
   // get the search keyword from local storage
-  var searchKeyword = _Helpers.helpers.handleLocalStorage("searchKeyWord", "get").name || "positivity"; // get photo from the unsplash api base on the keyword.
+  var searchKeyword = _Helpers.helpers.handleLocalStorage("searchKeyWord", "get"); // get photo from the unsplash api base on the keyword.
+  // set he word to search
 
-  _ApisRequest.apisrequest.handleGetPhotos(searchKeyword); // display the number of favorite destination and photos
+
+  var wordToSearch = ""; // check if the searchKeyword from local storage contains a value.
+
+  if (searchKeyword) {
+    wordToSearch = searchKeyword.name;
+  } else {
+    wordToSearch = "positivity"; // save "positivity" as searchKeyword
+
+    _Helpers.helpers.handleLocalStorage("searchKeyWord", "set", {
+      name: "positivity"
+    });
+  } // fetch photo base on the search keyword
+
+
+  _ApisRequest.apisrequest.handleGetPhotos(wordToSearch); // display the number of favorite destination and photos
 
 
   _UIHandler.uiHandler.handleDisplayFavoriteCount();
@@ -16763,7 +16778,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52906" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58011" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

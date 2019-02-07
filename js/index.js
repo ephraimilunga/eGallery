@@ -155,10 +155,10 @@ function getPhotFromoCurrentLocation() {
 
   const locationFullName = `${currentLocationName.city}, ${
     currentLocationName.initial
-  }, ${currentLocationName.country}`;
+    }, ${currentLocationName.country}`;
 
   // save the city has visited
-  helpers.handleSaveVisitedCities(locatioinFullName);
+  helpers.handleSaveVisitedCities(locationFullName);
 
   // redirect the user to the photos page
   urlRedirector.handleRedirection(locationFullName);

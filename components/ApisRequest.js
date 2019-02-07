@@ -28,15 +28,16 @@ const unsplash = new Unsplash({
 class ApisRequest {
   // get the user current location
   async handleGetUserCurrentLocation() {
-    // ***** Api keys ***
-    const ipStackKey = "e7aaa4e45f3c7fae3204efd4c3f540a3";
 
     //*** End Points ****
     // IPfy (Get the user IP)
     const ipfy = "https://api.ipify.org?format=json";
 
-    // IPstack (get te user location details. lat, lng, country, ...)
-    const ipStack = "http://api.ipstack.com/";
+    // cross origin api
+    const corsApiUrl = "https://cors-anywhere.herokuapp.com/";
+
+    // ipGeobytes (get te user location details. lat, lng, country name, ...)
+    const ipGeobytes = "http://getcitydetails.geobytes.com/GetCityDetails?fqcn=";
 
     // ***** Requests *****//
 
@@ -46,17 +47,17 @@ class ApisRequest {
       .then(data => data.ip);
 
     // get user city
-    const city = await fetch(`${ipStack}${ip}?access_key=${ipStackKey}`)
+    const city = await fetch(`${corsApiUrl}${ipGeobytes}${ip}`)
       .then(result => result.json())
       .then(data => data);
 
     // built the user current location info object
     const currentLocation = await {
-      city: city.city,
-      initial: city.region_code,
-      country: city.country_name,
-      lat: city.latitude,
-      lng: city.longitude
+      city: city.geobytescity,
+      initial: city.geobytescode,
+      country: city.geobytescountry,
+      lat: city.geobyteslatitude,
+      lng: city.geobyteslongitude
     };
 
     // save the user current location object in the local storage

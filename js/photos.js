@@ -295,9 +295,25 @@ window.addEventListener("keypress", handleTouchValidation);
 window.addEventListener("DOMContentLoaded", () => {
   // get the search keyword from local storage
   const searchKeyword =
-    helpers.handleLocalStorage("searchKeyWord", "get").name || "positivity";
+    helpers.handleLocalStorage("searchKeyWord", "get");
   // get photo from the unsplash api base on the keyword.
-  apisrequest.handleGetPhotos(searchKeyword);
+
+  // set he word to search
+  let wordToSearch = "";
+
+  // check if the searchKeyword from local storage contains a value.
+  if (searchKeyword) {
+    wordToSearch = searchKeyword.name
+  } else {
+    wordToSearch = "positivity";
+
+    // save "positivity" as searchKeyword
+    helpers.handleLocalStorage("searchKeyWord", "set", { name: "positivity" });
+  }
+
+
+  // fetch photo base on the search keyword
+  apisrequest.handleGetPhotos(wordToSearch);
 
   // display the number of favorite destination and photos
   uiHandler.handleDisplayFavoriteCount();
@@ -305,6 +321,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // back to home page
 const backtohome = document.querySelector(".back_to_home_page_icon");
-backtohome.addEventListener("click", function() {
+backtohome.addEventListener("click", function () {
   window.location.href = "https://ephraimilunga.co.za/egallery/";
 });
