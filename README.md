@@ -15,7 +15,7 @@ eGallery is a modern Web Application (powered by various APIs) writen in JavaScr
 - [Unsplash](https://www.unsplash.com/) (main api in the project) : is one of the the best Photos API that gives developers access to thousand free public photos.
 - [Ajax Autocomplete List Cities JSON-P API](http://geobytes.com/free-ajax-cities-jsonp-api/) : is one of Geobytes’ web services that gives developers access to all cities worldwide. Did I mentioned it ? **It's free**.
 - [IPfy](https://www.ipify.org/) : is a simple public IP Address API that allows developers to get the user IP programmatically.
-- [ipStack](https://ipstack.com/) : Locate and idendify visitor by IP Address. IpStack return useful data like city_name, country_name, region_code, latitude and logitude, ...
+- [Geobytes](http://getcitydetails.geobytes.com/) : Locate and idendify visitor by IP Address. Geobytes GetCityDetails return useful data like city_name, country_name, region_code, latitude and logitude, ...
 - [GoogleMap](https://developers.google.com/maps/documentation/javascript/adding-a-google-map) : Geolocate and display photos on the map.
 
 # Tools used in the Project
@@ -26,8 +26,8 @@ eGallery is a modern Web Application (powered by various APIs) writen in JavaScr
 # What I have learnd
 
 - How to fetch data from a none cross orgins endpoint. You can read how [here](https://cors-anywhere.herokuapp.com/),
-- Reading various apis document and use them,
-- Using the google map more advance method,
-- Using the most recent Javascript features (modules, reduce, map, filter, some, ...)
+- Reading various apis documentation and use them,
+- Using the google map more advanced method,
+- Using the most recent Javascript features (modules, reduce, Array methods such : map, filter, some, ... )
 
 # Thank you to check it out :)
